@@ -1,4 +1,3 @@
-import React from 'react'
 import type { Hand } from '../../../interface/hand'
 
  interface CreatedHandsProps {
@@ -13,13 +12,13 @@ function CreatedHands({ hands }: CreatedHandsProps) {
             {hands.length > 0 ? (
                 <ul>
                     {hands.map((hand) => (
-                        <li key={hand.id}>
-                            <h3>{hand.name}</h3>
+                       <li key={hand.id}>
+                            <h3>{hand.name} ({hand.type})</h3>
                             <ul>
                                 {hand.cards.map((card) => (
-                                    <li key={card.id}>
-                                        {card.icon} {card.value} ({card.type})
-                                    </li>
+                                <li key={card.id}>
+                                    {card.text}
+                                </li>
                                 ))}
                             </ul>
                         </li>

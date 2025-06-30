@@ -20,6 +20,7 @@ export default function RegisterForm(){
     })
     const {registerMutation} = useAuth();
     const onSubmit = (values : RegisterSchema) => {
+      console.log('Form values:', values);
         registerMutation.mutate(values)
     }
 
